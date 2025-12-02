@@ -1,90 +1,90 @@
-training/archive/trillium/Diffusion-2-PyTorch/benchmark.sh
-training/archive/trillium/Diffusion-2-PyTorch/env.sh
-training/archive/trillium/Diffusion-2-PyTorch/host.sh
-training/archive/trillium/Diffusion-2-PyTorch/train.sh
-training/archive/trillium/Llama3.0-70B-PyTorch/GCE/benchmark.sh
-training/archive/trillium/Llama3.0-70B-PyTorch/GCE/env.sh
-training/archive/trillium/Llama3.0-70B-PyTorch/GCE/host.sh
-training/archive/trillium/Llama3.0-70B-PyTorch/GCE/train.sh
-training/archive/trillium/Llama3.0-70B-PyTorch/XPK/benchmark.sh
-training/archive/trillium/Llama3.0-70B-PyTorch/XPK/env.sh
-training/archive/trillium/Llama3.0-70B-PyTorch/XPK/train.sh
-training/archive/trillium/Llama3.0-8B-PyTorch/GCE/benchmark.sh
-training/archive/trillium/Llama3.0-8B-PyTorch/GCE/env.sh
-training/archive/trillium/Llama3.0-8B-PyTorch/GCE/host.sh
-training/archive/trillium/Llama3.0-8B-PyTorch/GCE/train.sh
-training/archive/trillium/Llama3.0-8B-PyTorch/XPK/benchmark.sh
-training/archive/trillium/Llama3.0-8B-PyTorch/XPK/env.sh
-training/archive/trillium/Llama3.0-8B-PyTorch/XPK/train.sh
-training/archive/trillium/Llama3.1-405B-PyTorch/GCE/benchmark.sh
-training/archive/trillium/Llama3.1-405B-PyTorch/GCE/env.sh
-training/archive/trillium/Llama3.1-405B-PyTorch/GCE/host.sh
-training/archive/trillium/Llama3.1-405B-PyTorch/GCE/train.sh
-training/archive/trillium/Llama3.1-405B-PyTorch/XPK/benchmark.sh
-training/archive/trillium/Llama3.1-405B-PyTorch/XPK/env.sh
-training/archive/trillium/Llama3.1-405B-PyTorch/XPK/train.sh
-training/archive/trillium/Mixtral-8x7B-Pytorch/GCE/benchmark.sh
-training/archive/trillium/Mixtral-8x7B-Pytorch/GCE/env.sh
-training/archive/trillium/Mixtral-8x7B-Pytorch/GCE/host.sh
-training/archive/trillium/Mixtral-8x7B-Pytorch/GCE/train.sh
-training/archive/trillium/Mixtral-8x7B-Pytorch/XPK/benchmark.sh
-training/archive/trillium/Mixtral-8x7B-Pytorch/XPK/env.sh
-training/archive/trillium/Mixtral-8x7B-Pytorch/XPK/train.sh
-training/archive/v5p/Diffusion-2-PyTorch/benchmark.sh
-training/archive/v5p/Diffusion-2-PyTorch/env.sh
-training/archive/v5p/Diffusion-2-PyTorch/host.sh
-training/archive/v5p/Diffusion-2-PyTorch/train.sh
-training/archive/v5p/Llama2-7B-PyTorch/benchmark.sh
-training/archive/v5p/Llama2-7B-PyTorch/config.sh
-training/archive/v5p/Llama2-7B-PyTorch/env.sh
-training/archive/v5p/Llama2-7B-PyTorch/fsdp_config.sh
-training/archive/v5p/Llama2-7B-PyTorch/host.sh
-training/archive/v5p/Llama2-7B-PyTorch/train.sh
-training/archive/v5p/Mixtral-8x7B-PyTorch/benchmark.sh
-training/archive/v5p/Mixtral-8x7B-PyTorch/env.sh
-training/archive/v5p/Mixtral-8x7B-PyTorch/host.sh
-training/archive/v5p/Mixtral-8x7B-PyTorch/train.sh
-training/ironwood/deepseek3-671b/4k-bf16-tpu7x-4x4x8/run_recipe.sh
-training/ironwood/deepseek3-671b/4k-bf16-tpu7x-4x8x8/run_recipe.sh
-training/ironwood/deepseek3-671b/4k-fp8-tpu7x-4x4x8/run_recipe.sh
-training/ironwood/deepseek3-671b/4k-fp8-tpu7x-4x8x8/run_recipe.sh
-training/ironwood/gpt-oss-120b/8k-bf16-tpu7x-4x4x4/run_recipe.sh
-training/ironwood/gpt-oss-120b/8k-bf16-tpu7x-4x8x8/run_recipe.sh
-training/ironwood/llama3.1-405b/8k-bf16-tpu7x-4x8x8/run_recipe.sh
-training/ironwood/llama3.1-405b/8k-fp8-tpu7x-4x8x8/run_recipe.sh
-training/ironwood/llama3.1-70b/128k-bf16-tpu7x-4x8x8/run_recipe.sh
-training/ironwood/llama3.1-70b/128k-fp8-tpu7x-4x8x8/run_recipe.sh
-training/ironwood/llama3.1-70b/8k-bf16-tpu7x-4x4x4/run_recipe.sh
-training/ironwood/llama3.1-70b/8k-bf16-tpu7x-4x8x8/run_recipe.sh
-training/ironwood/llama3.1-70b/8k-fp8-tpu7x-4x4x4/run_recipe.sh
-training/ironwood/llama3.1-70b/8k-fp8-tpu7x-4x8x8/run_recipe.sh
-training/ironwood/qwen3-235b-a22b/4k-bf16-tpu7x-4x8x8/run_recipe.sh
-training/trillium/GPT3-175B-MaxText/bf16/gpt3-175b-v6e-256.sh
-training/trillium/GPT3-175B-MaxText/fp8/gpt3-175b-v6e-256.sh
-training/trillium/Gemma3-12B-MaxText/2x-v6e-256/gemma3-12B-2xv6e-256.sh
-training/trillium/Gemma3-12B-MaxText/4x-v6e-256/gemma3-12B-4xv6e-256.sh
-training/trillium/Gemma3-12B-MaxText/v6e-256/gemma3-12B-1xv6e-256.sh
-training/trillium/Llama2-70B-MaxText/llama2-70b-v6e-256.sh
-training/trillium/Llama3.1-405B-MaxText/llama3-1-405b-2xv6e-256.sh
-training/trillium/Llama3.1-70B-MaxText/v6e-128/llama3-1-70B-1xv6e-128.sh
-training/trillium/Llama3.1-70B-MaxText/v6e-256/llama3-1-70B-1xv6e-256.sh
-training/trillium/Llama3.1-70B-MaxText/v6e-32/llama3-1-70B-1xv6e-32.sh
-training/trillium/Llama3.1-70B-MaxText/v6e-64/llama3-1-70B-1xv6e-64.sh
-training/trillium/Llama3.1-8B-MaxText/v6e-128/llama3-1-8B-1xv6e-128.sh
-training/trillium/Llama3.1-8B-MaxText/v6e-16/llama3-1-8B-1xv6e-16.sh
-training/trillium/Llama3.1-8B-MaxText/v6e-256/llama3-1-8B-1xv6e-256.sh
-training/trillium/Llama3.1-8B-MaxText/v6e-32/llama3-1-8B-1xv6e-32.sh
-training/trillium/Llama3.1-8B-MaxText/v6e-64/llama3-1-8B-1xv6e-64.sh
-training/trillium/Llama3.1-8B-MaxText/v6e-8/llama3-1-8B-1xv6e-8.sh
-training/trillium/Mistral-7B-MaxText/mistral-7B-1xv6e-8.sh
-training/trillium/Mixtral-8x22B-MaxText/mixtral-8x22b-10xv6e-256.sh
-training/trillium/Mixtral-8x22B-MaxText/mixtral-8x22b-1xv6e-256.sh
-training/trillium/Mixtral-8x22B-MaxText/mixtral-8x22b-20xv6e-256.sh
-training/trillium/Mixtral-8x22B-MaxText/mixtral-8x22b-30xv6e-256.sh
-training/trillium/Mixtral-8x22B-MaxText/mixtral-8x22b-40xv6e-256.sh
-training/trillium/Mixtral-8x7B-MaxText/mixtral-8x7b-1xv6e-256.sh
-training/trillium/Mixtral-8x7B-MaxText/mixtral-8x7b-2xv6e-256.sh
-training/trillium/Mixtral-8x7B-MaxText/mixtral-8x7b-4xv6e-256.sh
-training/v5p/Diffusion-2-MaxDiffusion/scripts/run_v5p-ddp-pbs-16.sh
-training/v5p/Mixtral-8X7B-Maxtext/scripts/run_mixtral-8x7b.sh
-training/v5p/SDXL-MaxDiffusion/scripts/run_v5p-ddp-pbs-1.sh
+9 days ago training/archive/trillium/Diffusion-2-PyTorch/benchmark.sh
+9 days ago training/archive/trillium/Diffusion-2-PyTorch/env.sh
+9 days ago training/archive/trillium/Diffusion-2-PyTorch/host.sh
+9 days ago training/archive/trillium/Diffusion-2-PyTorch/train.sh
+9 days ago training/archive/trillium/Llama3.0-70B-PyTorch/GCE/benchmark.sh
+9 days ago training/archive/trillium/Llama3.0-70B-PyTorch/GCE/env.sh
+9 days ago training/archive/trillium/Llama3.0-70B-PyTorch/GCE/host.sh
+9 days ago training/archive/trillium/Llama3.0-70B-PyTorch/GCE/train.sh
+9 days ago training/archive/trillium/Llama3.0-70B-PyTorch/XPK/benchmark.sh
+9 days ago training/archive/trillium/Llama3.0-70B-PyTorch/XPK/env.sh
+9 days ago training/archive/trillium/Llama3.0-70B-PyTorch/XPK/train.sh
+9 days ago training/archive/trillium/Llama3.0-8B-PyTorch/GCE/benchmark.sh
+9 days ago training/archive/trillium/Llama3.0-8B-PyTorch/GCE/env.sh
+9 days ago training/archive/trillium/Llama3.0-8B-PyTorch/GCE/host.sh
+9 days ago training/archive/trillium/Llama3.0-8B-PyTorch/GCE/train.sh
+9 days ago training/archive/trillium/Llama3.0-8B-PyTorch/XPK/benchmark.sh
+9 days ago training/archive/trillium/Llama3.0-8B-PyTorch/XPK/env.sh
+9 days ago training/archive/trillium/Llama3.0-8B-PyTorch/XPK/train.sh
+9 days ago training/archive/trillium/Llama3.1-405B-PyTorch/GCE/benchmark.sh
+9 days ago training/archive/trillium/Llama3.1-405B-PyTorch/GCE/env.sh
+9 days ago training/archive/trillium/Llama3.1-405B-PyTorch/GCE/host.sh
+9 days ago training/archive/trillium/Llama3.1-405B-PyTorch/GCE/train.sh
+9 days ago training/archive/trillium/Llama3.1-405B-PyTorch/XPK/benchmark.sh
+9 days ago training/archive/trillium/Llama3.1-405B-PyTorch/XPK/env.sh
+9 days ago training/archive/trillium/Llama3.1-405B-PyTorch/XPK/train.sh
+9 days ago training/archive/trillium/Mixtral-8x7B-Pytorch/GCE/benchmark.sh
+9 days ago training/archive/trillium/Mixtral-8x7B-Pytorch/GCE/env.sh
+9 days ago training/archive/trillium/Mixtral-8x7B-Pytorch/GCE/host.sh
+9 days ago training/archive/trillium/Mixtral-8x7B-Pytorch/GCE/train.sh
+9 days ago training/archive/trillium/Mixtral-8x7B-Pytorch/XPK/benchmark.sh
+9 days ago training/archive/trillium/Mixtral-8x7B-Pytorch/XPK/env.sh
+9 days ago training/archive/trillium/Mixtral-8x7B-Pytorch/XPK/train.sh
+9 days ago training/archive/v5p/Diffusion-2-PyTorch/benchmark.sh
+9 days ago training/archive/v5p/Diffusion-2-PyTorch/env.sh
+9 days ago training/archive/v5p/Diffusion-2-PyTorch/host.sh
+9 days ago training/archive/v5p/Diffusion-2-PyTorch/train.sh
+9 days ago training/archive/v5p/Llama2-7B-PyTorch/benchmark.sh
+9 days ago training/archive/v5p/Llama2-7B-PyTorch/config.sh
+9 days ago training/archive/v5p/Llama2-7B-PyTorch/env.sh
+9 days ago training/archive/v5p/Llama2-7B-PyTorch/fsdp_config.sh
+9 days ago training/archive/v5p/Llama2-7B-PyTorch/host.sh
+9 days ago training/archive/v5p/Llama2-7B-PyTorch/train.sh
+9 days ago training/archive/v5p/Mixtral-8x7B-PyTorch/benchmark.sh
+9 days ago training/archive/v5p/Mixtral-8x7B-PyTorch/env.sh
+9 days ago training/archive/v5p/Mixtral-8x7B-PyTorch/host.sh
+9 days ago training/archive/v5p/Mixtral-8x7B-PyTorch/train.sh
+9 days ago training/ironwood/deepseek3-671b/4k-bf16-tpu7x-4x4x8/run_recipe.sh
+9 days ago training/ironwood/deepseek3-671b/4k-bf16-tpu7x-4x8x8/run_recipe.sh
+9 days ago training/ironwood/deepseek3-671b/4k-fp8-tpu7x-4x4x8/run_recipe.sh
+9 days ago training/ironwood/deepseek3-671b/4k-fp8-tpu7x-4x8x8/run_recipe.sh
+9 days ago training/ironwood/gpt-oss-120b/8k-bf16-tpu7x-4x4x4/run_recipe.sh
+9 days ago training/ironwood/gpt-oss-120b/8k-bf16-tpu7x-4x8x8/run_recipe.sh
+9 days ago training/ironwood/llama3.1-405b/8k-bf16-tpu7x-4x8x8/run_recipe.sh
+9 days ago training/ironwood/llama3.1-405b/8k-fp8-tpu7x-4x8x8/run_recipe.sh
+9 days ago training/ironwood/llama3.1-70b/128k-bf16-tpu7x-4x8x8/run_recipe.sh
+9 days ago training/ironwood/llama3.1-70b/128k-fp8-tpu7x-4x8x8/run_recipe.sh
+9 days ago training/ironwood/llama3.1-70b/8k-bf16-tpu7x-4x4x4/run_recipe.sh
+9 days ago training/ironwood/llama3.1-70b/8k-bf16-tpu7x-4x8x8/run_recipe.sh
+9 days ago training/ironwood/llama3.1-70b/8k-fp8-tpu7x-4x4x4/run_recipe.sh
+9 days ago training/ironwood/llama3.1-70b/8k-fp8-tpu7x-4x8x8/run_recipe.sh
+9 days ago training/ironwood/qwen3-235b-a22b/4k-bf16-tpu7x-4x8x8/run_recipe.sh
+9 days ago training/trillium/GPT3-175B-MaxText/bf16/gpt3-175b-v6e-256.sh
+9 days ago training/trillium/GPT3-175B-MaxText/fp8/gpt3-175b-v6e-256.sh
+9 days ago training/trillium/Gemma3-12B-MaxText/2x-v6e-256/gemma3-12B-2xv6e-256.sh
+9 days ago training/trillium/Gemma3-12B-MaxText/4x-v6e-256/gemma3-12B-4xv6e-256.sh
+9 days ago training/trillium/Gemma3-12B-MaxText/v6e-256/gemma3-12B-1xv6e-256.sh
+9 days ago training/trillium/Llama2-70B-MaxText/llama2-70b-v6e-256.sh
+9 days ago training/trillium/Llama3.1-405B-MaxText/llama3-1-405b-2xv6e-256.sh
+9 days ago training/trillium/Llama3.1-70B-MaxText/v6e-128/llama3-1-70B-1xv6e-128.sh
+9 days ago training/trillium/Llama3.1-70B-MaxText/v6e-256/llama3-1-70B-1xv6e-256.sh
+9 days ago training/trillium/Llama3.1-70B-MaxText/v6e-32/llama3-1-70B-1xv6e-32.sh
+9 days ago training/trillium/Llama3.1-70B-MaxText/v6e-64/llama3-1-70B-1xv6e-64.sh
+9 days ago training/trillium/Llama3.1-8B-MaxText/v6e-128/llama3-1-8B-1xv6e-128.sh
+9 days ago training/trillium/Llama3.1-8B-MaxText/v6e-16/llama3-1-8B-1xv6e-16.sh
+9 days ago training/trillium/Llama3.1-8B-MaxText/v6e-256/llama3-1-8B-1xv6e-256.sh
+9 days ago training/trillium/Llama3.1-8B-MaxText/v6e-32/llama3-1-8B-1xv6e-32.sh
+9 days ago training/trillium/Llama3.1-8B-MaxText/v6e-64/llama3-1-8B-1xv6e-64.sh
+9 days ago training/trillium/Llama3.1-8B-MaxText/v6e-8/llama3-1-8B-1xv6e-8.sh
+9 days ago training/trillium/Mistral-7B-MaxText/mistral-7B-1xv6e-8.sh
+9 days ago training/trillium/Mixtral-8x22B-MaxText/mixtral-8x22b-10xv6e-256.sh
+9 days ago training/trillium/Mixtral-8x22B-MaxText/mixtral-8x22b-1xv6e-256.sh
+9 days ago training/trillium/Mixtral-8x22B-MaxText/mixtral-8x22b-20xv6e-256.sh
+9 days ago training/trillium/Mixtral-8x22B-MaxText/mixtral-8x22b-30xv6e-256.sh
+9 days ago training/trillium/Mixtral-8x22B-MaxText/mixtral-8x22b-40xv6e-256.sh
+9 days ago training/trillium/Mixtral-8x7B-MaxText/mixtral-8x7b-1xv6e-256.sh
+9 days ago training/trillium/Mixtral-8x7B-MaxText/mixtral-8x7b-2xv6e-256.sh
+9 days ago training/trillium/Mixtral-8x7B-MaxText/mixtral-8x7b-4xv6e-256.sh
+9 days ago training/v5p/Diffusion-2-MaxDiffusion/scripts/run_v5p-ddp-pbs-16.sh
+9 days ago training/v5p/Mixtral-8X7B-Maxtext/scripts/run_mixtral-8x7b.sh
+9 days ago training/v5p/SDXL-MaxDiffusion/scripts/run_v5p-ddp-pbs-1.sh
