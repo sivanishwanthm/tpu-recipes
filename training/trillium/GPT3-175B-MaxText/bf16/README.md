@@ -1,30 +1,34 @@
-# Instructions for training GPT3-175B-Maxtext on TPU trillium
+# Train GPT-3 175B on Cloud TPU v6e
 
-## XPK setup
-Please follow the [XPK_README](https://github.com/AI-Hypercomputer/tpu-recipes/blob/main/training/XPK_README.md) to create your GKE cluster with XPK
+Step-by-step instructions on how to train the GPT-3 175B model. This recipe uses MaxText on a Cloud TPU v6e (Trillium) VM.
 
-## Prep for Maxtext 
+## Prerequisites
 
-### Install MaxText and Build Docker Image
-Please follow the [MAXTEXT_README](https://github.com/AI-Hypercomputer/tpu-recipes/blob/main/training/MAXTEXT_README.md) to install maxtext and build the docker image. The following variables should be set:
+- You have a GKE cluster created with [XPK](https://github.com/AI-Hypercomputer/tpu-recipes/blob/main/training/XPK_README.md).
+- You have installed MaxText and built the Docker image as described in the [MAXTEXT_README](https://github.com/AI-Hypercomputer/tpu-recipes/blob/main/training/MAXTEXT_README.md).
 
-In step 1, use the MaxText [tpu-recipes-v0.1.2](https://github.com/AI-Hypercomputer/maxtext/releases/tag/tpu-recipes-v0.1.2) tag to run this recipe:
-```
-git checkout tpu-recipes-v0.1.2
-```
+## Steps
 
-In step 3, use the jax-stable-stack image containing JAX 0.5.2:
-```
-BASE_IMAGE=us-docker.pkg.dev/cloud-tpu-images/jax-stable-stack/tpu:jax0.5.2-rev1
-bash docker_build_dependency_image.sh DEVICE=tpu MODE=stable_stack BASEIMAGE=${BASE_IMAGE}
-```
+### Step 1: Set up the environment
 
-## Run Maxtext GPT3-175B workloads on GKE
+1. When installing MaxText, use the `tpu-recipes-v0.1.2` tag:
 
-### Starting workload
+   ```bash
+   git checkout tpu-recipes-v0.1.2
+   ```
 
-From the MaxText root directory, start your GPT3-175B workload
-```
+2. When building the Docker image, use the `jax-stable-stack` image:
+
+   ```bash
+   BASE_IMAGE=us-docker.pkg.dev/cloud-tpu-images/jax-stable-stack/tpu:jax0.5.2-rev1
+   bash docker_build_dependency_image.sh DEVICE=tpu MODE=stable_stack BASEIMAGE=${BASE_IMAGE}
+   ```
+
+### Step 2: Run the workload
+
+From the MaxText root directory, start the GPT-3 175B workload:
+
+```bash
 python3 -m benchmarks.benchmark_runner xpk \
     --project=$PROJECT \
     --zone=$ZONE \
@@ -35,41 +39,3 @@ python3 -m benchmarks.benchmark_runner xpk \
     --model_name="gpt_3_175b_bf16" \
     --base_docker_image=maxtext_base_image
 ```
-
-From your workload logs, you should start seeing step time logs like the following:
-```
-completed step: 15, seconds: 17.182, TFLOP/s/device: 384.891, Tokens/s/device: 357.580, total_weights: 1572864, loss: 388.622
-```
-
-### Workload Details
-
-For reference, here are the `gpt_3_175b_bf16` workload details as found in `MaxText@tpu-recipes-v0.1.2`:
-
-```
-MaxTextModel(
-    model_name="gpt-3-175b-bf16",
-    model_type="gpt3-175b",
-    tuning_params={
-        "per_device_batch_size": 3,
-        "ici_fsdp_parallelism": -1,
-        "remat_policy": "full",
-        "attention": "flash",
-        "gcs_metrics": True,
-        "dataset_type": "synthetic",
-        "reuse_example_batch": 1,
-        "enable_checkpointing": False,
-        "profiler": "xplane",
-        "sa_block_q": 1024,
-        "sa_block_q_dkv": 2048,
-        "sa_block_q_dq": 2048,
-    },
-    xla_flags=(
-        xla_flags_library.DENSE_VMEM_LIMIT_FLAG
-        + xla_flags_library.CF_FOR_ALL_GATHER
-        + xla_flags_library.DATA_PARALLEL_OVERLAP
-        + xla_flags_library.DISABLE_BUNDLE_AWARE_COST_MODEL
-    ),
-)
-```
-
-This equivalent workload code can be found in the [maxtext_trillium_model_configs.py](https://github.com/AI-Hypercomputer/maxtext/blob/tpu-recipes-v0.1.2/benchmarks/maxtext_trillium_model_configs.py) file within the MaxText repository.
