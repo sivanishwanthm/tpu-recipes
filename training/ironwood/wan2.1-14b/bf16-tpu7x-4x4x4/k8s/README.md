@@ -34,6 +34,12 @@ For this recipe, the following setup is used:
     resource, which manages the execution of the MaxDiffusion pretraining
     workload.
 
+## Get the recipe
+```bash
+cd ~
+git clone https://github.com/ai-hypercomputer/tpu-recipes.git
+cd tpu-recipes/training/ironwood/wan2.1-14b/bf16-tpu7x-4x4x4/k8s
+```
 ## Run the recipe
 
 This recipe uses a Kubernetes manifest (k8s_manifest.yaml) to deploy the
@@ -92,7 +98,7 @@ kubectl get jobset -n default ${WORKLOAD_NAME}
 POD_NAME=$(kubectl get pods -l jobset.sigs.k8s.io/jobset-name=${WORKLOAD_NAME} -n default -o jsonpath='{.items[0].metadata.name}')
 
 # Follow the logs of that pod
-kubectl logs -f -n default ${POD_NAME}
+kubectl logs -f ${POD_NAME}
 ```
 
 ## Delete resources

@@ -292,6 +292,10 @@ and logs:
 
 ```bash
 kubectl get jobset -n default ${WORKLOAD_NAME}
+# Get the name of the first pod in the JobSet
+POD_NAME=$(kubectl get pods -l jobset.sigs.k8s.io/jobset-name=${WORKLOAD_NAME} -n default -o jsonpath='{.items[0].metadata.name}')
+
+# Follow the logs of that pod
 kubectl logs -f ${POD_NAME}
 ```
 

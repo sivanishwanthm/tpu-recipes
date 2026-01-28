@@ -44,6 +44,12 @@ For this recipe, the following setup is used:
 
 This recipe uses a mock pretraining dataset provided by the MaxText framework.
 
+## Get the recipe
+```bash
+cd ~
+git clone https://github.com/ai-hypercomputer/tpu-recipes.git
+cd tpu-recipes/training/ironwood/deepseek3-671b/4k-bf16-tpu7x-4x8x8/k8s
+```
 ## Run the recipe
 
 This recipe uses a Kubernetes manifest (`k8s_manifest.yaml`) to deploy the
@@ -98,7 +104,7 @@ kubectl get jobset -n default ${WORKLOAD_NAME}
 POD_NAME=$(kubectl get pods -l jobset.sigs.k8s.io/jobset-name=${WORKLOAD_NAME} -n default -o jsonpath='{.items[0].metadata.name}')
 
 # Follow the logs of that pod
-kubectl logs -f -n default ${POD_NAME}
+kubectl logs -f ${POD_NAME}
 ```
 
 You can also monitor your cluster and TPU usage through the Google Cloud
