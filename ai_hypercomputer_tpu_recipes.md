@@ -6,10 +6,13 @@ This table provides a consolidated summary of configuration, benchmarking, and s
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | TPU | Wan2.1-T2V-14B | Ironwood (TPU v7x) | MaxDiffusion | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/MaxDiffusion/Wan2.x/Wan2.1-T2V/README.md | BF16 | N/A | N/A |
 | TPU | Wan2.2-T2V-27B | Ironwood (TPU v7x) | MaxDiffusion | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/MaxDiffusion/Wan2.x/Wan2.2-T2V/README.md | BF16 | N/A | N/A |
+| TPU | GPT-OSS | Ironwood (TPU v7x) | vLLM | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/GPT-OSS/README-gcs.md | FP8 | N/A | N/A |
+| TPU | GPT-OSS | Ironwood (TPU v7x) | vLLM | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/GPT-OSS/README-lustre.md | FP8 | N/A | N/A |
 | TPU | Gemma4 | Ironwood (TPU v7x) | vLLM | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/Gemma4/README.md | FP8 | N/A | N/A |
 | TPU | Qwen3-32B | Ironwood (TPU v7x) | vLLM | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/Qwen3-32B/README.md | FP8 | N/A | N/A |
 | TPU | Qwen3-Coder-480B-A35B | Ironwood (TPU v7x) | vLLM | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/Qwen3-Coder-480B-A35B/README.md | FP8 | N/A | N/A |
 | TPU | Qwen3-Embedding-8B | Ironwood (TPU v7x) | vLLM | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/Qwen3-Embedding-8B/README.md | FP8 | N/A | N/A |
+| TPU | Qwen3-VL-Embedding-8B | Ironwood (TPU v7x) | vLLM | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/Qwen3-VL-Embedding-8B/README-correctness.md | BF16 | N/A | N/A |
 | TPU | Qwen3.5-397B | Ironwood (TPU v7x) | vLLM | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/Qwen3.5-397B/README.md | FP8 | N/A | N/A |
 | TPU | Stable Diffusion | Trillium (v6e) | MaxDiffusion | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/MaxDiffusion/StableDiffusion/README.md | N/A | N/A | N/A |
 | TPU | Wan2.2-T2V-27B | Trillium (v6e) | MaxDiffusion | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/MaxDiffusion/Wan2.x/Wan2.2-T2V/README.md | BF16 | N/A | N/A |
@@ -19,8 +22,11 @@ This table provides a consolidated summary of configuration, benchmarking, and s
 | TPU | Qwen2.5-VL | Trillium (v6e) | vLLM | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen2.5-VL/README.md | BF16 | 1x1 | 1 |
 | TPU | Qwen3 | Trillium (v6e) | vLLM | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen3/README.md | N/A | 2x2 | 4 |
 | TPU | SDXL | v5e | MaxDiffusion | Inference | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/v5e/MaxDiffusion/SDXL/README.md | N/A | N/A | N/A |
-| TPU | N/A | Ironwood (TPU v7x) | N/A | Microbenchmark | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/microbenchmarks/ironwood/automation/autoscaling/README.md | N/A | N/A | N/A |
-| TPU | N/A | Trillium (v6e) | N/A | Microbenchmark | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/microbenchmarks/trillium/collectives/README.md | BF16 | N/A | N/A |
+| TPU | Ironwood Benchmark Automation With CCC for nodepool creation | Ironwood (TPU v7x) | N/A | Microbenchmark | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/microbenchmarks/ironwood/automation/autoscaling/README.md | N/A | N/A | N/A |
+| TPU | All Gather Microbenchmark | Ironwood (TPU v7x) | N/A | Microbenchmark | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/microbenchmarks/ironwood/collectives/all_gather.md | N/A | N/A | N/A |
+| TPU | HBM Microbnechmarks on tpu7x-2x2x1 | Ironwood (TPU v7x) | N/A | Microbenchmark | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/microbenchmarks/ironwood/hbm/hbm.md | N/A | N/A | N/A |
+| TPU | Host Device Microbenchmarks on tpu7x-2x2x1 | Ironwood (TPU v7x) | N/A | Microbenchmark | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/microbenchmarks/ironwood/host_device/host_device.md | N/A | N/A | N/A |
+| TPU | Instructions for running Collectives Benchmark on TPU trillium (v6e-256) | Trillium (v6e) | N/A | Microbenchmark | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/microbenchmarks/trillium/collectives/README.md | BF16 | N/A | N/A |
 | TPU | Stable Diffusion 2 | Trillium (v6e) | PyTorch/XLA | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/archive/trillium/Diffusion-2-PyTorch/README.md | BF16 | N/A | N/A |
 | TPU | Llama3.0-70B | Trillium (v6e) | PyTorch/XLA | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/archive/trillium/Llama3.0-70B-PyTorch/GCE/README.md | BF16 | 16x16 | 256 |
 | TPU | Llama3.0-70B | Trillium (v6e) | PyTorch/XLA | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/archive/trillium/Llama3.0-70B-PyTorch/XPK/README.md | BF16 | v6e-256 | 256 |
@@ -53,10 +59,10 @@ This table provides a consolidated summary of configuration, benchmarking, and s
 | TPU | Gemma4-31B | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gemma4-31b/8k-bf16-tpu7x-4x4x4/xpk/README.md | BFLOAT16 | 4x4x4 | 64 |
 | TPU | Gemma4-4B | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gemma4-4b/8k-bf16-tpu7x-4x4x4/k8s/README.md | BFLOAT16 | 4x4x4 | 64 |
 | TPU | Gemma4-4B | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gemma4-4b/8k-bf16-tpu7x-4x4x4/xpk/README.md | BFLOAT16 | 4x4x4 | 64 |
-| TPU | GPT-OSS-120B | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gpt-oss-120b/8k-bf16-tpu7x-4x4x4/k8s/README.md | BF16 | 4x4x4 | 64 |
-| TPU | GPT-OSS-120B | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gpt-oss-120b/8k-bf16-tpu7x-4x4x4/xpk/README.md | BF16 | 4x4x4 | 64 |
-| TPU | GPT-OSS-120B | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gpt-oss-120b/8k-bf16-tpu7x-4x8x8/k8s/README.md | BF16 | 4x8x8 | 256 |
-| TPU | GPT-OSS-120B | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gpt-oss-120b/8k-bf16-tpu7x-4x8x8/xpk/README.md | BF16 | 4x8x8 | 256 |
+| TPU | GPT-OSS | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gpt-oss-120b/8k-bf16-tpu7x-4x4x4/k8s/README.md | BF16 | 4x4x4 | 64 |
+| TPU | GPT-OSS | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gpt-oss-120b/8k-bf16-tpu7x-4x4x4/xpk/README.md | BF16 | 4x4x4 | 64 |
+| TPU | GPT-OSS | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gpt-oss-120b/8k-bf16-tpu7x-4x8x8/k8s/README.md | BF16 | 4x8x8 | 256 |
+| TPU | GPT-OSS | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gpt-oss-120b/8k-bf16-tpu7x-4x8x8/xpk/README.md | BF16 | 4x8x8 | 256 |
 | TPU | Llama3.1-405B | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/llama3.1-405b/8k-bf16-tpu7x-4x8x8/README.md | BF16 | 4x8x8 | 256 |
 | TPU | Llama3.1-405B | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/llama3.1-405b/8k-fp8-tpu7x-4x8x8/README.md | FP8 | 4x8x8 | 256 |
 | TPU | Llama3.1-70B | Ironwood (TPU v7x) | MaxText | Pre-training | https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/llama3.1-70b/128k-bf16-tpu7x-4x8x8/k8s/README.md | BF16 | 4x8x8 | 256 |
