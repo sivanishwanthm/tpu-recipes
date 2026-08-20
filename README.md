@@ -1,25 +1,25 @@
 | Type | Accelerator | Orchestrator | Software Stack | Host Type | Model Used | CUJ | Recipe Path |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Diffusion | v6e | GCE | MaxDiffusion | single host | Stable Diffusion 1.5 | Serve a Diffusion model (E.g: Stable Diffusion 1.5) on GKE Trillium using MaxDiffusion | inference/trillium/MaxDiffusion/StableDiffusion/README.md |
-| Diffusion | v6e | GCE | MaxDiffusion | single host | Stable Diffusion 2.1 | N/A | inference/trillium/MaxDiffusion/StableDiffusion/README.md |
-| Diffusion | v6e | GCE | MaxDiffusion | single host | Stable Diffusion XL | Serve a Diffusion model (E.g: WAN 2.1 or SDXL) on GKE Trillium using MaxDiffusion | inference/trillium/MaxDiffusion/StableDiffusion/README.md |
-| Diffusion | v6e | GKE | MaxDiffusion | multihost | Wan 2.1 - 14B | Serve a Diffusion model (E.g: WAN 2.1 or SDXL) on GKE Trillium using MaxDiffusion | inference/trillium/MaxDiffusion/Wan2.x/README.md |
-| Diffusion | v6e | GKE | MaxDiffusion | multihost | Wan 2.2 - 14B | Serve a Diffusion model (E.g: WAN 2.2- T2V) on GKE Trillium using MaxDiffusion | inference/trillium/MaxDiffusion/Wan2.x/Wan2.2-T2V/README.md |
-| Dense | v6e | GCE | vLLM | single host | Gemma 4 - 31B | N/A | inference/trillium/vLLM/Gemma4/README.md |
-| MOE | v6e | GCE | vLLM | single host | Gemma 4 - 26B-A4B | N/A | inference/trillium/vLLM/Gemma4/README.md |
-| Dense | v6e | GCE | vLLM | single host | Llama 3.1 - 8B | Serve a dense OSS model (e.g: Llama 3.1- 8B) on GKE Trillium using vLLM single host | inference/trillium/vLLM/Llama3.x/README.md |
-| Dense | v6e | GCE | vLLM | single host | Llama 3.3 - 70B | N/A | inference/trillium/vLLM/Llama3.x/README.md |
-| Dense | v6e | GCE | vLLM | single host | Qwen 2.5 - 32B | N/A | inference/trillium/vLLM/Qwen2.5-32B/README.md |
-| Dense | v6e | GCE | vLLM | single host | Qwen 2.5-VL - 7B | N/A | inference/trillium/vLLM/Qwen2.5-VL/README.md |
-| Dense | v6e | GCE | vLLM | single host | Qwen 3 - 4B | N/A | inference/trillium/vLLM/Qwen3/README.md |
-| Dense | v6e | GCE | vLLM | single host | Qwen 3 - 32B | N/A | inference/trillium/vLLM/Qwen3/README.md |
-| Diffusion | v7x | GKE | MaxDiffusion | single host | Wan 2.1 - 14B | N/A | inference/ironwood/MaxDiffusion/Wan2.x/Wan2.1-T2V/README.md |
-| Diffusion | v7x | GKE | MaxDiffusion | single host | Wan 2.2 - 14B | N/A | inference/ironwood/MaxDiffusion/Wan2.x/Wan2.2-T2V/README.md |
-| Dense | v7x | GKE | vLLM | single host | Gemma 4 - 31B | Serve a dense OSS model (e.g: Qwen 3 - 32B or Gemma 4- 31B) on GKE Ironwood using vLLM single host | inference/ironwood/vLLM/Gemma4/README.md |
-| MOE | v7x | GKE | vLLM | single host | Gemma 4 - 26B-A4B | Serve a multimodal MoE model (E.g: Gemma 4 - 26B) on GKE Ironwood using vLLM single host | inference/ironwood/vLLM/Gemma4/README.md |
-| MOE | v7x | GKE | vLLM | multihost | GPT-OSS - 120B | N/A | inference/ironwood/vLLM/GPT-OSS/README-gcs.md |
-| MOE | v7x | GKE | vLLM | multihost | GPT-OSS - 120B | N/A | inference/ironwood/vLLM/GPT-OSS/README-lustre.md |
-| Dense | v7x | GKE | vLLM | single host | Qwen 3 - 32B | Serve a dense OSS model (e.g: Qwen 3 - 32B or Gemma 4- 31B) on GKE Ironwood using vLLM single host | inference/ironwood/vLLM/Qwen3-32B/README.md |
-| MOE | v7x | GKE | vLLM | multihost | Qwen 3-Coder - 480B | Serve a large multimodal MoE model (E.g: DeepSeek v3/R1 671B, Qwen 3.5- 397B or Qwen 3- Coder - 480B) on GKE/ Ironwood using vLLM as multihost | inference/ironwood/vLLM/Qwen3-Coder-480B-A35B/README.md |
-| Dense | v7x | GKE | vLLM | single host | Qwen 3-Embedding - 8B | N/A | inference/ironwood/vLLM/Qwen3-Embedding-8B/README.md |
-| MOE | v7x | GKE | vLLM | multihost | Qwen 3.5 - 397B | Serve a large multimodal MoE model (E.g: DeepSeek v3/R1 671B, Qwen 3.5- 397B or Qwen 3- Coder - 480B) on GKE/ Ironwood using vLLM as multihost | inference/ironwood/vLLM/Qwen3.5-397B/README.md |
+| Diffusion | v6e | GCE | MaxDiffusion | single host | Stable Diffusion 1.5 | Serve a Diffusion model (E.g: Stable Diffusion 1.5) on GKE Trillium using MaxDiffusion | [inference/trillium/MaxDiffusion/StableDiffusion/README.md](inference/trillium/MaxDiffusion/StableDiffusion/README.md) |
+| Diffusion | v6e | GCE | MaxDiffusion | single host | Stable Diffusion 2.1 | N/A | [inference/trillium/MaxDiffusion/StableDiffusion/README.md](inference/trillium/MaxDiffusion/StableDiffusion/README.md) |
+| Diffusion | v6e | GCE | MaxDiffusion | single host | Stable Diffusion XL | Serve a Diffusion model (E.g: WAN 2.1 or SDXL) on GKE Trillium using MaxDiffusion | [inference/trillium/MaxDiffusion/StableDiffusion/README.md](inference/trillium/MaxDiffusion/StableDiffusion/README.md) |
+| Diffusion | v6e | GKE | MaxDiffusion | multihost | Wan 2.1 - 14B | Serve a Diffusion model (E.g: WAN 2.1 or SDXL) on GKE Trillium using MaxDiffusion | [inference/trillium/MaxDiffusion/Wan2.x/README.md](inference/trillium/MaxDiffusion/Wan2.x/README.md) |
+| Diffusion | v6e | GKE | MaxDiffusion | multihost | Wan 2.2 - 14B | Serve a Diffusion model (E.g: WAN 2.2- T2V) on GKE Trillium using MaxDiffusion | [inference/trillium/MaxDiffusion/Wan2.x/Wan2.2-T2V/README.md](inference/trillium/MaxDiffusion/Wan2.x/Wan2.2-T2V/README.md) |
+| Dense | v6e | GCE | vLLM | single host | Gemma 4 - 31B | N/A | [inference/trillium/vLLM/Gemma4/README.md](inference/trillium/vLLM/Gemma4/README.md) |
+| MOE | v6e | GCE | vLLM | single host | Gemma 4 - 26B-A4B | N/A | [inference/trillium/vLLM/Gemma4/README.md](inference/trillium/vLLM/Gemma4/README.md) |
+| Dense | v6e | GCE | vLLM | single host | Llama 3.1 - 8B | Serve a dense OSS model (e.g: Llama 3.1- 8B) on GKE Trillium using vLLM single host | [inference/trillium/vLLM/Llama3.x/README.md](inference/trillium/vLLM/Llama3.x/README.md) |
+| Dense | v6e | GCE | vLLM | single host | Llama 3.3 - 70B | N/A | [inference/trillium/vLLM/Llama3.x/README.md](inference/trillium/vLLM/Llama3.x/README.md) |
+| Dense | v6e | GCE | vLLM | single host | Qwen 2.5 - 32B | N/A | [inference/trillium/vLLM/Qwen2.5-32B/README.md](inference/trillium/vLLM/Qwen2.5-32B/README.md) |
+| Dense | v6e | GCE | vLLM | single host | Qwen 2.5-VL - 7B | N/A | [inference/trillium/vLLM/Qwen2.5-VL/README.md](inference/trillium/vLLM/Qwen2.5-VL/README.md) |
+| Dense | v6e | GCE | vLLM | single host | Qwen 3 - 4B | N/A | [inference/trillium/vLLM/Qwen3/README.md](inference/trillium/vLLM/Qwen3/README.md) |
+| Dense | v6e | GCE | vLLM | single host | Qwen 3 - 32B | N/A | [inference/trillium/vLLM/Qwen3/README.md](inference/trillium/vLLM/Qwen3/README.md) |
+| Diffusion | v7x | GKE | MaxDiffusion | single host | Wan 2.1 - 14B | N/A | [inference/ironwood/MaxDiffusion/Wan2.x/Wan2.1-T2V/README.md](inference/ironwood/MaxDiffusion/Wan2.x/Wan2.1-T2V/README.md) |
+| Diffusion | v7x | GKE | MaxDiffusion | single host | Wan 2.2 - 14B | N/A | [inference/ironwood/MaxDiffusion/Wan2.x/Wan2.2-T2V/README.md](inference/ironwood/MaxDiffusion/Wan2.x/Wan2.2-T2V/README.md) |
+| Dense | v7x | GKE | vLLM | single host | Gemma 4 - 31B | Serve a dense OSS model (e.g: Qwen 3 - 32B or Gemma 4- 31B) on GKE Ironwood using vLLM single host | [inference/ironwood/vLLM/Gemma4/README.md](inference/ironwood/vLLM/Gemma4/README.md) |
+| MOE | v7x | GKE | vLLM | single host | Gemma 4 - 26B-A4B | Serve a multimodal MoE model (E.g: Gemma 4 - 26B) on GKE Ironwood using vLLM single host | [inference/ironwood/vLLM/Gemma4/README.md](inference/ironwood/vLLM/Gemma4/README.md) |
+| MOE | v7x | GKE | vLLM | multihost | GPT-OSS - 120B | N/A | [inference/ironwood/vLLM/GPT-OSS/README-gcs.md](inference/ironwood/vLLM/GPT-OSS/README-gcs.md) |
+| MOE | v7x | GKE | vLLM | multihost | GPT-OSS - 120B | N/A | [inference/ironwood/vLLM/GPT-OSS/README-lustre.md](inference/ironwood/vLLM/GPT-OSS/README-lustre.md) |
+| Dense | v7x | GKE | vLLM | single host | Qwen 3 - 32B | Serve a dense OSS model (e.g: Qwen 3 - 32B or Gemma 4- 31B) on GKE Ironwood using vLLM single host | [inference/ironwood/vLLM/Qwen3-32B/README.md](inference/ironwood/vLLM/Qwen3-32B/README.md) |
+| MOE | v7x | GKE | vLLM | multihost | Qwen 3-Coder - 480B | Serve a large multimodal MoE model (E.g: DeepSeek v3/R1 671B, Qwen 3.5- 397B or Qwen 3- Coder - 480B) on GKE/ Ironwood using vLLM as multihost | [inference/ironwood/vLLM/Qwen3-Coder-480B-A35B/README.md](inference/ironwood/vLLM/Qwen3-Coder-480B-A35B/README.md) |
+| Dense | v7x | GKE | vLLM | single host | Qwen 3-Embedding - 8B | N/A | [inference/ironwood/vLLM/Qwen3-Embedding-8B/README.md](inference/ironwood/vLLM/Qwen3-Embedding-8B/README.md) |
+| MOE | v7x | GKE | vLLM | multihost | Qwen 3.5 - 397B | Serve a large multimodal MoE model (E.g: DeepSeek v3/R1 671B, Qwen 3.5- 397B or Qwen 3- Coder - 480B) on GKE/ Ironwood using vLLM as multihost | [inference/ironwood/vLLM/Qwen3.5-397B/README.md](inference/ironwood/vLLM/Qwen3.5-397B/README.md) |
