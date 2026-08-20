@@ -1,85 +1,32 @@
-# Cloud TPU performance benchmark recipes
+# TPU Inference Recipes Index
 
-This repository contains recipes that provide instructions to reproduce specific
-workload performance measurements, which are part of a confidential benchmarking
-program. These recipes focus on helping you reliably achieve performance metrics,
-such as throughput, that demonstrate the combined hardware and software stack on
-TPUs.
+This directory contains production-ready TPU inference recipes for Google Cloud TPU hardware generations **v6e (Trillium)** and **v7x (Ironwood)** targeting **MOE**, **Dense**, and **Diffusion** model architectures.
 
-**Note:** The recipes in this repository are not designed as general-purpose code
-samples or tutorials for using Compute Engine-based products.
-
-## Intended audience
-
-This content is for you if you are a customer or partner who needs to:
-- Validate hardware performance with your suppliers.
-- Inform purchasing decisions using the benchmarking data.
-- Reproduce optimal performance scenarios before you customize workflows for your
-  own requirements.
-
-## How to use these recipes
-
-To reproduce a benchmark, follow these steps:
-
-1.**Identify your requirements:** determine the model, TPU version, workload, and
-  framework (JAX or PyTorch) that you are interested in.
-2.**Select a recipe:** navigate to the appropriate directory, such as `./training`
-  or `./inference`, to find a recipe that meets your needs.
-3.**Follow the procedure:** each recipe guides you through preparing your environment,
-  running the benchmark, and analyzing the results (including detailed logs). You can
-  automate your infrastructure setup using Cluster Toolkit. For more information, see
-  [Automated TPU environment deployment with Cluster Toolkit](https://cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-overview). 
-
-## Repository organization
-
-- `./training`: This directory contains recipes with instructions to reproduce the
-  training performance of popular models, using PyTorch and JAX on specific TPU versions.
-- `./inference`: This directory contains recipes that provide instructions and
-  configurations to reproduce inference performance of models running on specific TPU
-  versions.
-- `./microbenchmarks`: This directory contains instructions for running low-level
-  performance tests on TPUs, specifically focusing on matrix multiplication
-  performance and memory bandwidth.
-- `./utils`: This directory contains utility scripts for cluster and resource management
-  for TPU7x (Ironwood) in GKE. For fully automated, production-ready cluster deployment,
-  we recommend using the [Automated TPU environment deployment with Cluster Toolkit](https://cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-7x).
-
-
-## Repository scope
-
-This repository provides the steps that you can use to reproduce a specific benchmark. 
-The actual performance measurements and the complete, confidential benchmark report are 
-not included.
-
-## Methodology
-
-Performance benchmarks measure the performance of various workloads on the platform. 
-These benchmarks are primarily used to validate performance with hardware suppliers and 
-to provide you with data for purchasing decisions.
-
-## Maintenance policy
-
-Benchmark data is considered a point-in-time measurement and completed benchmarks are not 
-repeated. We maintain and update the recipes in this repository on a best-effort basis.
-
-## Resources
-
-For general guidance on using Google Cloud compute products, see the official documentation
-and tutorials:
-
-- [Compute Engine overview](https://docs.cloud.google.com/compute/docs/overview)
-- [Compute Engine samples](https://docs.cloud.google.com/compute/docs/samples)
-- [Cloud TPU documentation](https://docs.cloud.google.com/tpu/docs)
-- [AI Hypercomputer documentation](https://docs.cloud.google.com/ai-hypercomputer/docs)
-- [Automated TPU environment deployment with Cluster Toolkit](https://cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-overview)
-
-## Report issues
-
-If you have questions or encounter problems with this repository, report them through
-[GitHub Issues](https://github.com/AI-Hypercomputer/tpu-recipes/issues) or reach out to
-your Google Cloud account team for assistance.
-
-## Contributor notes
-
-Note: This is not an officially supported Google product. This project is not eligible for
-the  [Google Open Source Software Vulnerability Rewards Program](https://bughunters.google.com/open-source-security).
+| Baseline Model | Variant Details | Type | Accelerator | Orchestrator | Software Stack | Host Type | CUJ | Recipe Path |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Gemma 4 26B-A4B IT | 1x TPU v7x chip, single-host deployment, TP=1 | MOE | v7x | GKE | vLLM | single host | Serve a multimodal MoE model (E.g: Gemma 4 - 26B) on GKE Ironwood using vLLM single host | `inference/ironwood/vLLM/Gemma4/README.md` |
+| Gemma 4 31B IT | 4x TPU v7x chips (2x2x1 topology), single-host deployment, TP=4 | Dense | v7x | GKE | vLLM | single host | Serve a dense OSS model (e.g: Qwen 3 - 32B or Gemma 4- 31B) on GKE Ironwood using vLLM single host | `inference/ironwood/vLLM/Gemma4/README.md` |
+| GPT-OSS / Llama 3.1 405B | 200x TPU v7x chips (50 nodes x 2x2x1 topology), multihost deployment with GCS storage, TP=2, DP=4 per node | Dense | v7x | GKE | vLLM | multihost | Serve a dense OSS model (E.g: Llama 3.1 405B) using multihost serving on GKE using TPU v7 and vLLM & llm-d | `inference/ironwood/vLLM/GPT-OSS/README-gcs.md` |
+| GPT-OSS / Llama 3.1 405B | 200x TPU v7x chips (50 nodes x 2x2x1 topology), multihost deployment with Managed Lustre storage, TP=2, DP=4 per node | Dense | v7x | GKE | vLLM | multihost | Serve a dense OSS model (E.g: Llama 3.1 405B) using multihost serving on GKE using TPU v7 and vLLM & llm-d | `inference/ironwood/vLLM/GPT-OSS/README-lustre.md` |
+| Qwen 3 32B | 4x TPU v7x chips (2x2x1 topology), single-host deployment, TP=4 | Dense | v7x | GKE | vLLM | single host | Serve a dense OSS model (e.g: Qwen 3 - 32B or Gemma 4- 31B) on GKE Ironwood using vLLM single host | `inference/ironwood/vLLM/Qwen3-32B/README.md` |
+| Qwen 3 Coder 480B-A35B | 4x TPU v7x chips (2x2x1 topology), FP8 quantization, multihost deployment, TP=4 | MOE | v7x | GKE | vLLM | multihost | Serve a large multimodal MoE model (E.g: DeepSeek v3/R1 671B, Qwen 3.5- 397B or Qwen 3- Coder - 480B) on GKE/ Ironwood using vLLM as multihost | `inference/ironwood/vLLM/Qwen3-Coder-480B-A35B/README.md` |
+| Qwen 3 Embedding 8B | 1x TPU v7x chip, single-host deployment, TP=1 | Dense | v7x | GKE | vLLM | single host | Serve a dense OSS model (e.g: Qwen 3 - 32B or Gemma 4- 31B) on GKE Ironwood using vLLM single host | `inference/ironwood/vLLM/Qwen3-Embedding-8B/README.md` |
+| Qwen 3.5 397B | 4x TPU v7x chips (2x2x1 topology), FP8 quantization, multihost deployment, TP=4 | MOE | v7x | GKE | vLLM | multihost | Serve a large multimodal MoE model (E.g: DeepSeek v3/R1 671B, Qwen 3.5- 397B or Qwen 3- Coder - 480B) on GKE/ Ironwood using vLLM as multihost | `inference/ironwood/vLLM/Qwen3.5-397B/README.md` |
+| WAN 2.1 T2V 1.3B | 4x TPU v7x chips (2x2x1 topology), multihost serving via XPK | Diffusion | v7x | GKE | MaxDiffusion | multihost | Serve a Diffusion model (E.g: SD3) on GKE Ironwood using MaxDiffusion | `inference/ironwood/MaxDiffusion/Wan2.x/Wan2.1-T2V/README.md` |
+| WAN 2.1 T2V 14B | 4x TPU v7x chips (2x2x1 topology), multihost serving via XPK | Diffusion | v7x | GKE | MaxDiffusion | multihost | Serve a Diffusion model (E.g: SD3) on GKE Ironwood using MaxDiffusion | `inference/ironwood/MaxDiffusion/Wan2.x/Wan2.1-T2V/README.md` |
+| WAN 2.2 T2V 27B | 4x TPU v7x chips (2x2x1 topology), multihost serving via XPK | Diffusion | v7x | GKE | MaxDiffusion | multihost | Serve a Diffusion model (E.g: SD3) on GKE Ironwood using MaxDiffusion | `inference/ironwood/MaxDiffusion/Wan2.x/Wan2.2-T2V/README.md` |
+| Stable Diffusion 1.5 | 1x TPU v6e chip (v6e-1 topology), single-host TPU VM deployment | Diffusion | v6e | GCE | MaxDiffusion | single host | Serve a Diffusion model (E.g: Stable Diffusion 1.5) on GKE Trillium using MaxDiffusion | `inference/trillium/MaxDiffusion/StableDiffusion/README.md` |
+| Stable Diffusion 2.1 | 1x TPU v6e chip (v6e-1 topology), single-host TPU VM deployment | Diffusion | v6e | GCE | MaxDiffusion | single host | Serve a Diffusion model (E.g: Stable Diffusion 1.5) on GKE Trillium using MaxDiffusion | `inference/trillium/MaxDiffusion/StableDiffusion/README.md` |
+| Stable Diffusion XL | 1x TPU v6e chip (v6e-1 topology), single-host TPU VM deployment | Diffusion | v6e | GCE | MaxDiffusion | single host | Serve a Diffusion model (E.g: WAN 2.1 or SDXL) on GKE Trillium using MaxDiffusion | `inference/trillium/MaxDiffusion/StableDiffusion/README.md` |
+| WAN 2.1 T2V 14B | 8x or 16x TPU v6e chips (v6e-8 or v6e-16 topology), multihost serving via XPK | Diffusion | v6e | GKE | MaxDiffusion | multihost | Serve a Diffusion model (E.g: WAN 2.1 or SDXL) on GKE Trillium using MaxDiffusion | `inference/trillium/MaxDiffusion/Wan2.x/README.md` |
+| WAN 2.1 I2V 14B | 8x or 16x TPU v6e chips (v6e-8 or v6e-16 topology), multihost serving via XPK | Diffusion | v6e | GKE | MaxDiffusion | multihost | Serve a Diffusion model (E.g: WAN 2.1 or SDXL) on GKE Trillium using MaxDiffusion | `inference/trillium/MaxDiffusion/Wan2.x/README.md` |
+| WAN 2.2 T2V 27B | 8x or 16x TPU v6e chips (v6e-8 or v6e-16 topology), multihost serving via XPK | Diffusion | v6e | GKE | MaxDiffusion | multihost | Serve a Diffusion model (E.g: WAN 2.2- T2V) on GKE Trillium using MaxDiffusion | `inference/trillium/MaxDiffusion/Wan2.x/Wan2.2-T2V/README.md` |
+| WAN 2.2 I2V 27B | 8x or 16x TPU v6e chips (v6e-8 or v6e-16 topology), multihost serving via XPK | Diffusion | v6e | GKE | MaxDiffusion | multihost | Serve a Diffusion model (E.g: WAN 2.2- T2V) on GKE Trillium using MaxDiffusion | `inference/trillium/MaxDiffusion/Wan2.x/README.md` |
+| Gemma 4 26B-A4B IT | 4x TPU v6e chips (v6e-4 topology), single-host TPU VM / Docker Compose, TP=4 | MOE | v6e | GCE | vLLM | single host | Serve a large multimodal MoE model (E.g: Qwen 3.5 35B or Mixtral 8x22B) on GKE/ Trillium using vLLM as multihost | `inference/trillium/vLLM/Gemma4/README.md` |
+| Gemma 4 31B IT | 4x TPU v6e chips (v6e-4 topology), single-host TPU VM / Docker Compose, TP=4 | Dense | v6e | GCE | vLLM | single host | Serve a dense OSS model (E.g: Llama 70B or Qwen3 -32B) using multihost serving on GKE using TPU v6e and vLLM | `inference/trillium/vLLM/Gemma4/README.md` |
+| Llama 3.1 8B | 1x TPU v6e chip (v6e-1 topology), single-host TPU VM, TP=1 | Dense | v6e | GCE | vLLM | single host | Serve a dense OSS model (e.g: Llama 3.1- 8B) on GKE Trillium using vLLM single host | `inference/trillium/vLLM/Llama3.x/README.md` |
+| Llama 3.1 70B / Llama 3.3 70B | 8x TPU v6e chips (v6e-8 topology), multihost TPU VM deployment, TP=8 | Dense | v6e | GCE | vLLM | multihost | Serve a dense OSS model (E.g: Llama 70B or Qwen3 -32B) using multihost serving on GKE using TPU v6e and vLLM | `inference/trillium/vLLM/Llama3.x/README.md` |
+| Qwen 2.5 32B | 4x TPU v6e chips (v6e-4 topology), single-host TPU VM, TP=4 | Dense | v6e | GCE | vLLM | single host | Serve a dense OSS model (E.g: Llama 70B or Qwen3 -32B) using multihost serving on GKE using TPU v6e and vLLM | `inference/trillium/vLLM/Qwen2.5-32B/README.md` |
+| Qwen 2.5 VL 7B | 1x TPU v6e chip (v6e-1 topology), single-host TPU VM, TP=1 | Dense | v6e | GCE | vLLM | single host | Serve a dense OSS model (e.g: Llama 3.1- 8B) on GKE Trillium using vLLM single host | `inference/trillium/vLLM/Qwen2.5-VL/README.md` |
+| Qwen 3 4B | 1x TPU v6e chip (v6e-1 topology), single-host TPU VM, TP=1 | Dense | v6e | GCE | vLLM | single host | Serve a dense OSS model (e.g: Llama 3.1- 8B) on GKE Trillium using vLLM single host | `inference/trillium/vLLM/Qwen3/README.md` |
+| Qwen 3 32B | 4x TPU v6e chips (v6e-4 topology), single-host TPU VM, TP=4 | Dense | v6e | GCE | vLLM | single host | Serve a dense OSS model (E.g: Llama 70B or Qwen3 -32B) using multihost serving on GKE using TPU v6e and vLLM | `inference/trillium/vLLM/Qwen3/README.md` |
