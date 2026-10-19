@@ -1,0 +1,39 @@
+Model name,workload_type,hardware_type,topology,num_chips,num_slices,seq_length,precision,software,GitHub link
+Gemma3-12B,training,Trillium (TPU v6e),16x16,256,1,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Gemma3-12B-MaxText/v6e-256
+Gemma3-12B,training,Trillium (TPU v6e),16x16,512,2,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Gemma3-12B-MaxText/2x-v6e-256
+Gemma3-12B,training,Trillium (TPU v6e),16x16,1024,4,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Gemma3-12B-MaxText/4x-v6e-256
+GPT3-175B,training,Trillium (TPU v6e),16x16,256,1,2048,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/GPT3-175B-MaxText/bf16
+GPT3-175B,training,Trillium (TPU v6e),16x16,256,1,2048,fp8,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/GPT3-175B-MaxText/fp8
+Llama2-70B,training,Trillium (TPU v6e),16x16,256,1,4096,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama2-70B-MaxText
+Llama3.1-8B,training,Trillium (TPU v6e),2x4,8,1,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-8B-MaxText/v6e-8
+Llama3.1-8B,training,Trillium (TPU v6e),4x4,16,1,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-8B-MaxText/v6e-16
+Llama3.1-8B,training,Trillium (TPU v6e),4x8,32,1,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-8B-MaxText/v6e-32
+Llama3.1-8B,training,Trillium (TPU v6e),8x8,64,1,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-8B-MaxText/v6e-64
+Llama3.1-8B,training,Trillium (TPU v6e),8x16,128,1,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-8B-MaxText/v6e-128
+Llama3.1-8B,training,Trillium (TPU v6e),16x16,256,1,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-8B-MaxText/v6e-256
+Llama3.1-70B,training,Trillium (TPU v6e),4x8,32,1,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-70B-MaxText/v6e-32
+Llama3.1-70B,training,Trillium (TPU v6e),8x8,64,1,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-70B-MaxText/v6e-64
+Llama3.1-70B,training,Trillium (TPU v6e),8x16,128,1,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-70B-MaxText/v6e-128
+Llama3.1-70B,training,Trillium (TPU v6e),16x16,256,1,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-70B-MaxText/v6e-256
+Llama3.1-405B,training,Trillium (TPU v6e),16x16,1024,4,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-405B-MaxText
+Mistral-7B,training,Trillium (TPU v6e),2x4,8,1,8192,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Mistral-7B-MaxText
+Mixtral-8x7B,training,Trillium (TPU v6e),16x16,256,1,4096,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Mixtral-8x7B-MaxText
+Mixtral-8x7B,training,Trillium (TPU v6e),16x16,512,2,4096,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Mixtral-8x7B-MaxText
+Mixtral-8x7B,training,Trillium (TPU v6e),16x16,1024,4,4096,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Mixtral-8x7B-MaxText
+Mixtral-8x22B,training,Trillium (TPU v6e),16x16,256,1,4096,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Mixtral-8x22B-MaxText
+Mixtral-8x22B,training,Trillium (TPU v6e),16x16,2560,10,4096,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Mixtral-8x22B-MaxText
+Mixtral-8x22B,training,Trillium (TPU v6e),16x16,5120,20,4096,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Mixtral-8x22B-MaxText
+Mixtral-8x22B,training,Trillium (TPU v6e),16x16,7680,30,4096,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Mixtral-8x22B-MaxText
+Mixtral-8x22B,training,Trillium (TPU v6e),16x16,10240,40,4096,bf16,MaxText / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Mixtral-8x22B-MaxText
+Stable Diffusion,inference,Trillium (TPU v6e),1x1,1,1,N/A,bf16,MaxDiffusion / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/MaxDiffusion/StableDiffusion
+Wan2.1-T2V,inference,Trillium (TPU v6e),4x4,16,1,N/A,bf16,MaxDiffusion / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/MaxDiffusion/Wan2.x/Wan2.1-T2V
+Wan2.2-T2V,inference,Trillium (TPU v6e),4x4,16,1,N/A,bf16,MaxDiffusion / JAX,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/MaxDiffusion/Wan2.x/Wan2.2-T2V
+Gemma 4 31B,inference,Trillium (TPU v6e),2x4,8,1,8192,bf16,vLLM / PyTorch,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Gemma4
+Gemma 4 26B-A4B,inference,Trillium (TPU v6e),2x4,8,1,8192,bf16,vLLM / PyTorch,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Gemma4
+Gemma 4 26B-A4B,inference,Trillium (TPU v6e),2x4,8,1,8192,bf16 (FP8 KV Cache),vLLM (TorchTPU) / PyTorch,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/vLLM-TorchTPU/Gemma4-26B
+Llama 3.1 8B,inference,Trillium (TPU v6e),1x1,1,1,4096,bf16,vLLM / PyTorch,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Llama3.x
+Llama 3.1 70B,inference,Trillium (TPU v6e),2x4,8,1,4096,bf16,vLLM / PyTorch,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Llama3.x
+Qwen2.5-32B,inference,Trillium (TPU v6e),2x2,4,1,4096,bf16,vLLM / PyTorch,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen2.5-32B
+Qwen2.5-VL-7B,inference,Trillium (TPU v6e),1x1,1,1,4096,bf16,vLLM / PyTorch,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen2.5-VL
+Qwen3-4B,inference,Trillium (TPU v6e),1x1,1,1,4096,bf16,vLLM / PyTorch,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen3
+Qwen3-32B,inference,Trillium (TPU v6e),2x2,4,1,4096,bf16,vLLM / PyTorch,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen3
