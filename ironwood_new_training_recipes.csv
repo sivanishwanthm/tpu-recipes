@@ -1,0 +1,5 @@
+Model,Hardware,Topology,Num Chips,Seq Length,Precision,Software,Recipe Path,GitHub Link
+Llama3.1-8B-LongContext-Maxtext,Ironwood (v7x),4x4x4,64,10485760,,jax_maxtext,training/ironwood/Llama3.1-8B-LongContext-Maxtext/cluster_toolkit,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/Llama3.1-8B-LongContext-Maxtext/cluster_toolkit
+llama3.1-70b,Ironwood (v7x),4x4x4,64,8192,bf16,jax_maxtext,training/ironwood/llama3.1-70b/8k-bf16-tpu7x-4x4x4,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/llama3.1-70b/8k-bf16-tpu7x-4x4x4
+wan2.1-14b,Ironwood (v7x),4x4x4,64,75600,bf16,maxdiffusion,training/ironwood/wan2.1-14b/bf16-tpu7x-4x4x4,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/wan2.1-14b/bf16-tpu7x-4x4x4
+wan2.2-t2v-14b,Ironwood (v7x),2x4x4,32,75600,bf16,maxdiffusion,training/ironwood/wan2.2-t2v-14b/bf16-tpu7x-2x4x4,https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/wan2.2-t2v-14b/bf16-tpu7x-2x4x4
